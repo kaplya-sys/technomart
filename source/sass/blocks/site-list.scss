@@ -1,0 +1,29 @@
+@use "global/variables";
+
+.site-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-left: -22px;
+    list-style-type: none;
+}
+
+.site-list__link {
+    display: flex;
+    padding: 19px 20px 27px 26px;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    color: variables.$basicWhite;
+    
+    &:not(&--active):hover {
+        color: variables.$basicGreyLight;
+        background-color: variables.$basicLightBlue;
+    }
+    
+    &--active {
+        font-weight: 700;
+        color: variables.$basicWhite;
+        background-color: variables.$basicLightBlue;
+    }
+}

@@ -1,0 +1,54 @@
+@use "global/variables";
+
+.control {
+    display: flex;
+    align-items: center;
+    flex-basis: content;
+    cursor: pointer;
+}
+
+.control__field {  
+    &:checked + .control__checkbox::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 9px;
+        height: 7px;
+        background-image: url("../../images/checked.svg");
+        background-repeat: no-repeat;
+        transform: translate(-50%, -50%);
+        content: "";
+    }
+    
+    &:hover + .control__checkbox {
+        opacity: 0.6;
+    }
+    
+    &:focus-visible + .control__checkbox {
+        opacity: 0.5;
+    }
+    
+    &:active + .control__checkbox {
+        opacity: 0.2;
+    }
+    
+    &:active ~ .control__label {
+        opacity: 0.4;
+    }
+}
+
+.control__checkbox {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 18px;
+    border: variables.$basicGrey solid 2px;
+    border-radius: 2px;
+}
+
+.control__label {
+    font-size: 14px;
+    line-height: 18px;
+    color: variables.$basicBlack;
+}

@@ -1,0 +1,12 @@
+@use "global/variables";
+
+.page-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    background-color: variables.$specialWhite;
+}

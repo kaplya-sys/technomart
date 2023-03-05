@@ -1,0 +1,56 @@
+@use "global/variables";
+
+.user-list {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.user-list__item--empty .user-list__link--bookmark {
+    margin-right: 23px;
+}
+
+.user-list__item--empty .user-list__link--basket {
+    margin-right: 26px;
+}
+
+.user-list__item--empty .user-list__link-count {
+    display: none;
+}
+
+.user-list__link {
+    display: flex;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: variables.$basicWhite;
+    
+    &--bookmark {
+        margin-right: 20px;
+    }
+    
+    &--bookmark .user-list__link-icon {
+        margin-right: 8px;
+    }
+    
+    &--basket {
+        margin-right: 30px;
+    }
+    
+    &--basket .user-list__link-icon {
+        margin-right: 6px;
+    }
+}
+
+.user-list__button {
+    display: flex;
+    padding: 12px 10px;
+    text-decoration: none;
+    color: variables.$basicWhite;
+    background-color: variables.$basicGreen;
+    border-radius: 4px;
+}

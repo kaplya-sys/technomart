@@ -1,0 +1,42 @@
+@use "global/variables";
+
+.field {
+    width: 100%;
+    padding: 8px 14px 6px;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: variables.$specialDarkBlue;
+    border: 1px solid variables.$basicGrey;
+    border-radius: 2px;
+    
+    &::placeholder {
+        color: #cccccc;
+    }
+    
+    &:hover {
+        color: variables.$basicDarkBlue;
+        border-color: variables.$basicGreen;
+    }
+    
+    &:focus {
+        color: variables.$basicDarkBlue;
+        border-color: variables.$basicGreen;
+        outline: 1px solid variables.$specialYellow;
+    }
+    
+    &:disabled {
+        color: #808080;
+        border-color: variables.$basicGreyLight;
+    }
+    
+    &--error {
+        color: variables.$basicDarkBlue;
+        border-color: variables.$basicRed;
+    }
+    
+    &--error:hover {
+        border-color: variables.$basicRed;
+        outline: 1px solid variables.$basicRed;
+    }
+}

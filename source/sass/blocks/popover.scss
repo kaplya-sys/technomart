@@ -1,0 +1,85 @@
+@use "global/variables";
+
+.popover {
+    display: none;
+    flex-direction: column;
+    width: 360px;
+    padding: 22px 29px 35px 31px;
+    background-color: variables.$basicWhite;
+    border-radius: 2px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.popover__title {
+    margin: 0;
+    margin-bottom: 46px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+    
+    &--authorized {
+        margin-bottom: 34px;
+    }
+}
+
+.popover__close-button {
+    position: absolute;
+    top: 19px;
+    right: 19px;
+}
+
+.popover__link {
+    margin-bottom: 23px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: variables.$basicGrey;
+    
+    &:hover {
+        color: variables.$basicGreen;
+    }
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &:focus-visible {
+        color: rgba(variables.$basicGrey, 0.5);
+    }
+    
+    &:active {
+        color: variables.$specialGreenLight;
+    }
+}
+
+.popover__button {
+    align-self: baseline;
+    padding: 9px 42px;
+    text-decoration: none;
+    color: variables.$basicLightBlue;
+    background-color:transparent;
+    border: 2px solid variables.$basicGreen;
+    border-radius: 2px;
+    cursor: pointer;
+    
+    &:hover {
+        border-color: variables.$basicGrey;
+    }
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &:focus-visible {
+        border-color: rgba(variables.$basicGrey, 0.5);
+    }
+    
+    &:active {
+        color: variables.$basicGreyLight;
+        border-color: variables.$basicGreyLight;
+    }
+}

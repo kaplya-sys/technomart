@@ -1,0 +1,63 @@
+@use "global/variables";
+
+.close-button {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background-color: transparent;
+    border: variables.$specialGreyLight solid 2px;
+    border-radius: 50%;
+    cursor: pointer;
+    
+    &::after,
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 2px;
+        background-color: variables.$specialGreyLight;
+        content: "";
+    }
+    
+    &::after {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    
+    &::before {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    
+    &:hover {
+        border-color: variables.$basicGreen;
+    }
+    
+    &:hover::after,
+    &:hover::before {
+        background-color: variables.$basicGreen;
+    }
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &:focus-visible {
+        border-color: rgba(variables.$specialGreyLight, 0.5);
+    }
+    
+    &:focus-visible::after,
+    &:focus-visible::before {
+        background-color: rgba(variables.$specialGreyLight, 0.5);
+    }
+    
+    &:active {
+        border-color: variables.$specialGreenLight;
+
+    }
+    
+    &:active::after,
+    &:active::before {
+        background-color: variables.$specialGreenLight;
+    }
+}

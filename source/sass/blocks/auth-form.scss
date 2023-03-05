@@ -1,0 +1,107 @@
+@use "global/variables";
+
+.auth-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.auth-form__label {
+    display: block;
+    width: 300px;
+    margin-bottom: 7px;
+    
+    &--password {
+        margin-bottom: 12px;
+    }
+    
+    &--checkbox {
+        margin-right: 24px;
+        margin-bottom: 38px;
+    }
+}
+
+.auth-form__link {
+    display: flex;
+    padding-top: 1px;
+    margin-bottom: 38px;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+    color: variables.$basicBlack;
+    
+    &:hover {
+        opacity: 0.6;
+    }
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &:focus-visible {
+        opacity: 0.5;
+    }
+    
+    &:active {
+        opacity: 0.4;
+    }
+}
+
+.auth-form__button-login {
+    display: flex;
+    margin-right: 5px;
+    margin-left: -5px;
+    padding: 11px 35px 11px 25px;
+    color: variables.$basicWhite;
+    background-color: variables.$basicGreen;
+    border-radius: 2px;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: variables.$success;
+    }
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &:focus-visible {
+        background-color: rgba(variables.$success, 0.5);
+    }
+    
+    &:active {
+        background-color: variables.$specialGreen;
+    }
+}
+
+.auth-form__button-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 16px;
+}
+
+.auth-form__button-register {
+    display: flex;
+    padding: 9px 15px;
+    text-decoration: none;
+    color: variables.$basicLightBlue;
+    background-color:transparent;
+    border: 2px solid variables.$basicGreen;
+    border-radius: 2px;
+    
+    &:hover {
+        border-color: variables.$basicGrey;
+    }
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &:focus-visible {
+        border-color: rgba(variables.$basicGrey, 0.5);
+    }
+    
+    &:active {
+        color: variables.$basicGreyLight;
+        border-color: variables.$basicGreyLight;
+    }
+}

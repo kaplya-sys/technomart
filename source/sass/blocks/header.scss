@@ -1,0 +1,93 @@
+@use "global/variables";
+
+.header {
+    background: linear-gradient(#f3f7f9 44px, #293449 44px, #293449 89px, #3d546f 89px, #3d546f 159px);
+}
+
+.header__contacts-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 44px;
+}
+
+.header__contacts-descriptions {
+    margin-right: auto;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 18px;
+    color: variables.$basicRed;
+}
+
+.header__contacts-address {
+    margin-right: 34px;
+    padding-bottom: 5px;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: variables.$basicLightBlue;
+}
+
+.header__contacts-telephone {
+    display: flex;
+    margin-right: 2px;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: variables.$basicDarkBlue;
+}
+
+.header__telephone-icon {
+    margin-right: 8px;
+}
+
+.header__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header__search {
+    position: relative;
+    margin-left: 220px;
+}
+
+.header__search-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 21px 11px;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: variables.$basicWhite;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+    &--active {
+        background-color: variables.$basicBackground;
+    }
+    
+    &--active + .form-search {
+        display: flex;
+    }
+}
+
+.header__search-button-icon {
+    margin-right: 12px;
+}
+
+.header__nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__auth-menu {
+    position: relative;
+}
+
