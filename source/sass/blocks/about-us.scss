@@ -1,0 +1,23 @@
+@use "global/variables";
+
+
+.about-us__title {
+    margin-bottom: 23px;
+}
+
+.about-us__description {
+    width: 500px;
+    margin: 0;
+    margin-bottom: 39px;
+    font-size: 16px;
+    line-height: 24px;
+    color: variables.$basicDarkBlue;
+}
+
+.about-us__link {
+    padding: 14px 45px 13px 45px;
+    text-decoration: none;
+    color: variables.$basicWhite;
+    background-color: variables.$basicRed;
+    border-radius: 2px;
+}

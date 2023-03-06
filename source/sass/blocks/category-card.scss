@@ -7,7 +7,7 @@
     background-color: variables.$specialYellow;
     background-image: url("../../images/icon-materials.svg");
     background-repeat: no-repeat;
-    background-position: 75% 50%;
+    background-position: 87% 49%;
 
     &--new::before {
         position: absolute;
@@ -29,11 +29,11 @@
 .category-card__link {
     display: inline-block;
     min-width: 180px;
-    padding: 11px 20px 11px 28px;
+    padding: 10px 20px 10px 27px;
     text-decoration: none;
     color: variables.$basicWhite;;
     border: 1px solid variables.$basicWhite;
     background-image: url("../../images/arrow-right.svg");
     background-repeat: no-repeat;
-    background-position: 5% 50%;
+    background-position: 3% 50%;
 }

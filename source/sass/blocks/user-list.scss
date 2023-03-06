@@ -5,15 +5,16 @@
     align-items: center;
     margin: 0;
     padding: 0;
+    padding-bottom: 8px;
     list-style-type: none;
 }
 
 .user-list__item--empty .user-list__link--bookmark {
-    margin-right: 23px;
+    margin-right: 15px;
 }
 
 .user-list__item--empty .user-list__link--basket {
-    margin-right: 26px;
+    margin-right: 20px;
 }
 
 .user-list__item--empty .user-list__link-count {
@@ -48,7 +49,8 @@
 
 .user-list__button {
     display: flex;
-    padding: 12px 10px;
+    margin-right: 2px;
+    padding: 12px 12px;
     text-decoration: none;
     color: variables.$basicWhite;
     background-color: variables.$basicGreen;

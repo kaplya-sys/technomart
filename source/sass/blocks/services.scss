@@ -7,8 +7,8 @@
 .services__content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 52px 115px 53px 115px;
+    align-items: center;
+    padding: 52px 0 53px 0;
 }
 
 .services__title {
@@ -16,6 +16,7 @@
 }
 
 .services__description {
+    width: 556px;
     margin: 0;
     margin-bottom: 64px;
     font-size: 18px;

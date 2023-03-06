@@ -5,6 +5,9 @@
     flex-direction: column;
     justify-content: flex-end;
     padding: 24px 39px 74px 31px;
+    background-color: variables.$basicWhite;
+    border-radius: 2px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .service-card__title {
@@ -14,7 +17,6 @@
 
 .service-card__description {
     margin: 0;
-    margin-bottom: 64px;
     font-size: 16px;
     line-height: 24px;
     color: variables.$basicBlack;
