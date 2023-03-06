@@ -1,0 +1,14 @@
+.social {
+    display: grid;
+    grid-template-columns: 36px 36px 33px;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.social__link {
+    display: flex;
+    text-decoration: none;
+}

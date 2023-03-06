@@ -1,0 +1,102 @@
+@use "global/variables";
+
+.slider__content {
+    position: relative;
+    width: 770px;
+}
+
+.slider__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.slider__item {
+    display: none;
+    flex-direction: column;
+    min-height: 390px;
+    padding: 50px 50px 40px 50px;
+    background-color: variables.$basicGrey;
+    background-repeat: no-repeat;
+
+    &--drill {
+        background-image: url("../../images/slide-1.jpg");
+    }
+
+    &--perforator {
+        background-image: url("../../images/slide-2.jpg");
+    }
+
+    &--current {
+        display: flex;;
+    }
+}
+
+.slider__title {
+    margin-bottom: 10px;
+    color: variables.$basicWhite;
+}
+
+.slider__description {
+    margin: 0;
+    margin-bottom: auto;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: variables.$basicWhite;
+}
+
+.slider__link {
+    display: flex;
+    align-self: flex-start;
+    padding: 13px 6px 14px 5px;
+    text-decoration: none;
+    color: variables.$basicWhite;
+    background-color: variables.$basicRed;
+    border-radius: 4px;
+}
+
+.slider__pagination-list {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    transform: translateX(-50%);
+}
+
+.slider__pagination-button {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    background-color: variables.$specialYellowLight;
+    border: none;
+    border-radius: 50%;
+}
+
+.slider__button {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    background-color: rgba(variables.$basicDarkBlue, 0.6);
+    border: none;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    &--prev {
+        left: 30px;
+        background-image: url("../../images/arrow-right.svg");
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    &--next {
+        right: 30px;
+        background-image: url("../../images/arrow-right.svg");
+    }
+}

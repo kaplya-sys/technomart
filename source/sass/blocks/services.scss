@@ -1,0 +1,48 @@
+@use "global/variables";
+
+.services {
+    background-color: variables.$addressText;
+}
+
+.services__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 52px 115px 53px 115px;
+}
+
+.services__title {
+    margin-bottom: 30px;
+}
+
+.services__description {
+    margin: 0;
+    margin-bottom: 64px;
+    font-size: 18px;
+    line-height: 24px;
+    color: variables.$basicDarkBlue;
+}
+
+.services__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.services__item {
+    background-repeat: no-repeat;
+
+    &--delivery {
+        background-image: url("../../images/icon-delivery.svg");
+    }
+
+    &--warranty {
+        background-image: url("../../images/icon-sale.svg");
+    }
+
+    &--credit {
+        background-image: url("../../images/icon-materials.svg");
+    }
+}

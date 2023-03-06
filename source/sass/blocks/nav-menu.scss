@@ -1,0 +1,36 @@
+@use "global/variables";
+
+.nav-menu__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 27px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav-menu__item {
+    &--toolings {
+        background-color: variables.$specialBlue;
+        background-image: url("../../images/icon-tooling.svg");
+    }
+
+    &--technic {
+        background-color: variables.$specialLilac;
+        background-image: url("../../images/icon-technic.svg");
+    }
+
+    &--discount {
+        grid-column: -1 / -2;
+        grid-row: 2 / 3;
+        background-color: variables.$specialGreenLight;
+        background-image: url("../../images/icon-sale.svg");
+    }
+
+    &--delivery {
+        grid-column: -1 / -2;
+        grid-row: 3 / 4;
+        background-image: url("../../images/icon-delivery.svg");
+    }
+}

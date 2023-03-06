@@ -1,0 +1,89 @@
+@use "global/variables";
+
+.footer {
+    background: linear-gradient(#32425C 216px, #293449 216px, #293449 276px);
+}
+
+.footer__column-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__contacts-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__logo {
+    margin-top: -3px;
+    margin-bottom: 21px;
+}
+
+.footer__contacts-address {
+    margin-bottom: 21px;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: variables.$addressText
+}
+
+.footer__contacts-telephone {
+    text-decoration: none;
+    color: variables.$addressText
+}
+
+.footer__social-list {
+    margin-bottom: 54px;
+}
+
+.footer__copirate {
+    margin-bottom: 21px;
+    font-size: 14px;
+    line-height: 18px;
+    color: variables.$basicWhite;
+}
+
+.footer__service-column {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer__feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 29px;
+}
+
+.footer__feedback-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: variables.$basicWhite;
+}
+
+.feedback__feedback-link {
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    color: variables.$specialYellowLight;
+}
+
+.footer__subscribe {
+    margin-bottom: 78px;
+}
+
+.footer__developer {
+    margin-bottom: 21px;
+    font-size: 14px;
+    line-height: 18px;
+    color: variables.$basicWhite;
+}
+
+.footer__developer-link {
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+    color: variables.$specialYellowLight;
+}

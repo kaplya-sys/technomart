@@ -1,0 +1,12 @@
+@use "global/variables";
+
+.title {
+    margin: 0;
+    font-family: "Fira Sans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: variables.$basicDarkBlue;
+}

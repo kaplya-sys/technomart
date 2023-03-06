@@ -1,0 +1,22 @@
+@use "global/variables";
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px 39px 74px 31px;
+}
+
+.service-card__title {
+    margin-bottom: 21px;
+    color: variables.$basicLightBlue;
+}
+
+.service-card__description {
+    margin: 0;
+    margin-bottom: 64px;
+    font-size: 16px;
+    line-height: 24px;
+    color: variables.$basicBlack;
+    
+}

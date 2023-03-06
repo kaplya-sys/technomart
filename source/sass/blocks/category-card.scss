@@ -1,0 +1,39 @@
+@use "global/variables";
+
+.category-card {
+    position: relative;
+    width: 370px;
+    padding: 20px 25px 33px 25px;
+    background-color: variables.$specialYellow;
+    background-image: url("../../images/icon-materials.svg");
+    background-repeat: no-repeat;
+    background-position: 75% 50%;
+
+    &--new::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70px;
+        height: 70px;
+        background-image: url("../../images/new.svg");
+        background-repeat: no-repeat;
+        content: "";
+    }
+}
+
+.category-card__title {
+    margin-bottom: 57px;
+    color: variables.$basicWhite;
+}
+
+.category-card__link {
+    display: inline-block;
+    min-width: 180px;
+    padding: 11px 20px 11px 28px;
+    text-decoration: none;
+    color: variables.$basicWhite;;
+    border: 1px solid variables.$basicWhite;
+    background-image: url("../../images/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+}
