@@ -1,0 +1,17 @@
+.catalog__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 33px;
+    row-gap: 29px;
+    max-width: 876px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.catalog__pagination-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}

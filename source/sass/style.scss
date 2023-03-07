@@ -23,7 +23,7 @@
 @use "blocks/main-index";
 @use "blocks/services";
 @use "blocks/slider";
-// @use "blocks/slier-pagination";
+@use "blocks/product-card";
 @use "blocks/service-card";
 @use "blocks/nav-menu";
 // @use "blocks/products-list";
@@ -32,13 +32,13 @@
 @use "blocks/subscribe-form";
 // @use "blocks/delivery";
 // @use "blocks/tooltip";
-// @use "blocks/contacts";
+@use "blocks/contacts";
 // @use "blocks/feedback";
 // @use "blocks/breadcrumbs";
 // @use "blocks/filter-group";
-// @use "blocks/filter-form";
+@use "blocks/filter-form";
 // @use "blocks/select";
 // @use "blocks/range";
 @use "blocks/control";
-// @use "blocks/catalog";
+@use "blocks/catalog";
 // @use "blocks/pagination";
