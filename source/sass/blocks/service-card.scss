@@ -3,8 +3,7 @@
 .service-card {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 24px 39px 74px 31px;
+    padding: 24px 39px 50px 31px;
     background-color: variables.$basicWhite;
     border-radius: 2px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
@@ -15,10 +14,15 @@
     color: variables.$basicLightBlue;
 }
 
+.service-card__image {
+    display: block;
+    margin-bottom: 46px;
+    order: -1;
+}
+
 .service-card__description {
     margin: 0;
     font-size: 16px;
     line-height: 24px;
     color: variables.$basicBlack;
-    
 }

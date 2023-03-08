@@ -3,24 +3,43 @@
 .product-card {
     padding: 27px 27px 23px 27px;
 
-    &--new::before {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 70px;
-        height: 70px;
-        background-image: url("../../images/new.svg");
-        background-repeat: no-repeat;
-        content: "";
+    &--new {
+        position: relative;
+        
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 70px;
+            height: 70px;
+            background-image: url("../../images/new.svg");
+            background-repeat: no-repeat;
+            z-index: 1;
+            content: "";
+        }
     }
 }
 
 .product-card__link {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    &:hover + .product-card__buttons-wrapper {
+        display: flex;
+    }
 }
 
 .product-card__title {
+    width: 200px;
+    margin: 0;
     margin-bottom: 11px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: variables.$basicDarkBlue;
 }
 
 .product-card__image {
@@ -30,31 +49,107 @@
 }
 
 .product-card__old-price {
-    margin-bottom: 11px;
+    margin-bottom: 15px;
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 2px;
     text-decoration-line: line-through;
     text-transform: uppercase;
-    color: #A9A9A9;
+    color: variables.$oldPrice;
 }
 
 .product-card__price {
     display: block;
-    padding: 11px 29px 11px 10px;
+    padding: 11px 45px 11px 30px;
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #FFFFFF;
-    background-image: url("../../images/card-price.png");
-    background-repeat: no-repeat;
+    color: variables.$basicWhite;
+    mask-image: url("../../images/card-price.png");
+    background-color: variables.$basicRed;
+    border-radius: 4px;
+    
+    &:hover {
+        background-color: variables.$priceLabelHover;
+    }
+    
+    &:active {
+        background-color: variables.$error;
+    }
 }
 
-.product-card__button-wrapper {
+.product-card__buttons-wrapper {
+    position: absolute;
+    top: 7%;
+    left: 50%;
     display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 216px;
+    height: 180px;
+    padding: 35px 41px 54px 34px;
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateX(-50%);
+    
+    &:hover {
+        display: flex;
+    }
 }
 
-.product-card__button {
-    padding: 0;
+.product-card__buy-button {
+    display: flex;
+    margin-bottom: 11px;
+    padding: 11px 27px 11px 23px;
+    color: variables.$basicWhite;
+    background-color: variables.$basicGreen;
+    border-radius: 2px;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: variables.$success;
+    }
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &:focus-visible {
+        background-color: rgba(variables.$success, 0.5);
+    }
+    
+    &:active {
+        background-color: variables.$specialGreen;
+    }
+}
+
+.product-card__button-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+}
+
+.product-card__bookmark-button {
+    padding: 9px 15px;
+    color: variables.$basicLightBlue;
+    background-color:transparent;
+    border: 2px solid variables.$basicGreen;
+    border-radius: 2px;
+    
+    &:hover {
+        border-color: variables.$basicGrey;
+    }
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &:focus-visible {
+        border-color: rgba(variables.$basicGrey, 0.5);
+    }
+    
+    &:active {
+        color: variables.$basicGreyLight;
+        border-color: variables.$basicGreyLight;
+    }
 }

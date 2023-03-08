@@ -19,6 +19,7 @@
     width: 556px;
     margin: 0;
     margin-bottom: 64px;
+    margin-left: 12px;
     font-size: 18px;
     line-height: 24px;
     color: variables.$basicDarkBlue;
@@ -41,6 +42,10 @@
 
     &--warranty {
         background-image: url("../../images/icon-sale.svg");
+    }
+    
+    &--warranty .service-card__description {
+        margin-left: 4px;
     }
 
     &--credit {

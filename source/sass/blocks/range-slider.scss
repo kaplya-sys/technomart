@@ -1,0 +1,107 @@
+@use "global/variables";
+
+.range-slider__range-wrapper {
+    width: 220px;
+    margin-bottom: 7px;
+    padding: 19px 20px;
+    background-color: variables.$rangeBackground;
+    border-radius: 2px;
+}
+
+.range-slider__bar {
+    width: 180px;
+    height: 2px;
+    background-color: variables.$basicGrey;
+}
+
+.range-slider__scale {
+    position: relative;
+    width: 75px;
+    height: 2px;
+    background-color: variables.$success;
+}
+
+.range-slider__button {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background-color: variables.$basicWhite;
+    border: 2px solid variables.$basicGrey;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    
+    &:hover {
+        background-color: variables.$specialGreen;
+    }
+    
+    &:focus-visible {
+        outline-offset: 1px;
+        outline: 1px solid variables.$specialYellow;
+    }
+    
+    &:active {
+        background-color: variables.$success;
+    }
+    
+    &--min {
+        left: 0;
+    }
+    
+    &--max {
+        left: 70px;
+    }
+    
+}
+
+.range-slider__value-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 8px;
+        height: 1px;
+        background-color: variables.$basicDarkBlue;
+        transform: translate(-50%, -50%);
+        content: "";
+    }
+}
+
+.range-slider__value {
+    width: 95px;
+    padding: 11px 0;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: variables.$basicDarkBlue;
+    background-color: variables.$rangeBackground;
+    border: none;
+    
+    &:hover {
+        outline: 1px solid variables.$basicGreen;
+    }
+    
+    &:focus-visible {
+        outline: 1px solid variables.$specialYellow;
+    }
+    
+    &:active {
+        background-color: rgba(variables.$rangeBackground, 0.4);
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

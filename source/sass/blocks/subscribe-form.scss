@@ -15,7 +15,13 @@
 }
 
 .subscribe-form__field {
-    border: 1px solid variables.$basicGreen;;
+    padding: 5px 22px 9px 15px;
+    border: 1px solid variables.$basicGreen;
+    
+    &::placeholder {
+        font-size: 14px;
+        line-height: 18px;
+    }
 }
 
 .subscribe-form__button {

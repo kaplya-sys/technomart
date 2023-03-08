@@ -25,7 +25,8 @@
     }
     
     &:focus-visible + .control__checkbox {
-        opacity: 0.5;
+        outline-offset: 1px;
+        outline: 1px solid variables.$specialYellow;
     }
     
     &:active + .control__checkbox {
@@ -34,6 +35,22 @@
     
     &:active ~ .control__label {
         opacity: 0.4;
+    }
+    
+    &--radio + .control__checkbox {
+        border-radius: 50%;
+    }
+    
+    &--radio:checked + .control__checkbox::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: variables.$basicGrey;
+        transform: translate(-50%, -50%);
+        content: "";
     }
 }
 

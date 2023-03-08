@@ -19,10 +19,15 @@
         border-color: variables.$basicGreen;
     }
     
-    &:focus {
+    &:focus-visible {
         color: variables.$basicDarkBlue;
         border-color: variables.$basicGreen;
         outline: 1px solid variables.$specialYellow;
+    }
+    
+    &:active {
+        color: variables.$basicDarkBlue;
+        border-color: rgba(variables.$basicGreen, 0.4);
     }
     
     &:disabled {

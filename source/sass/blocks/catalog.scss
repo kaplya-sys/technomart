@@ -1,3 +1,28 @@
+@use "global/variables";
+
+.catalog__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 74px;
+}
+
+.catalog__title {
+    grid-column: 1 / -1;
+    margin-bottom: 26px;
+}
+
+.catalog__dropdown {
+    width: 280px;
+    margin-left: 6px;
+    margin-bottom: 32px;
+}
+
+.catalog__product-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 33px;
+}
+
 .catalog__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -5,13 +30,49 @@
     row-gap: 29px;
     max-width: 876px;
     margin: 0;
+    margin-bottom: 32px;
     padding: 0;
     list-style-type: none;
 }
 
+.catalog__buttons-wrapper {
+    display: flex;
+    align-self: center;
+    margin-left: 3px;
+    margin-bottom: 53px;
+}
+
 .catalog__pagination-list {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
+    margin-right: 9px;
     padding: 0;
     list-style-type: none;
+}
+
+.catalog__pagination-item {
+    margin-right: 8px;
+}
+
+.catalog__pagination-button {
+    width: 50px;
+    height: 45px;
+    padding: 0;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: variables.$basicWhite;
+    background: variables.$basicGrey;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.catalog__button {
+    padding: 14px 37px 13px 37px;
+    color: variables.$basicWhite;
+    background: variables.$basicRed;
+    border-radius: 2px;
 }

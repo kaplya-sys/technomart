@@ -1,0 +1,45 @@
+@use "global/variables";
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown__list {
+    width: 100%;
+    padding: 6px 16px;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: variables.$basicDarkBlue;
+    border: 1px solid variables.$basicGrey;
+    border-radius: 2px;
+    appearance: none;
+    cursor: pointer;
+    
+    &:hover {
+        border: 1px solid variables.$basicGreen;
+    }
+    
+    &:focus-visible {
+        border-color: variables.$basicGreen;
+        outline: 1px solid variables.$specialYellow;
+    }
+    
+    &:focus-visible + .dropdown__icon {
+        color: variables.$basicGreen;
+    }
+    
+    &:active {
+        border-color: rgba(variables.$basicGreen, 0.4);
+    }
+}
+
+.dropdown__icon {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    color: variables.$basicGrey;
+    transform: translateY(-50%);
+}

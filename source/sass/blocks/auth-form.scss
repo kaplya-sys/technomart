@@ -92,10 +92,6 @@
         border-color: variables.$basicGrey;
     }
     
-    &:focus {
-        outline: none;
-    }
-    
     &:focus-visible {
         border-color: rgba(variables.$basicGrey, 0.5);
     }

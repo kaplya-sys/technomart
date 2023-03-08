@@ -18,6 +18,7 @@
     padding: 50px 50px 40px 50px;
     background-color: variables.$basicGrey;
     background-repeat: no-repeat;
+    background-size: cover;
 
     &--drill {
         background-image: url("../../images/slide-1.jpg");
@@ -26,9 +27,13 @@
     &--perforator {
         background-image: url("../../images/slide-2.jpg");
     }
+    
+    &--wall-chaser {
+        background-image: url("../../images/slide-3.jpg");
+    }
 
     &--current {
-        display: flex;;
+        display: flex;
     }
 }
 
