@@ -39,6 +39,19 @@
     letter-spacing: 2px;
     text-decoration: none;
     color: variables.$basicDarkBlue;
+
+    &:hover {
+        opacity: 0.6;
+    }
+    
+    &:focus-visible {
+        outline-offset: 1px;
+        outline: 1px solid variables.$specialYellow;
+    }
+    
+    &:active {
+        opacity: 0.2;
+    }
 }
 
 .header__telephone-icon {
@@ -55,6 +68,14 @@
 .header__search {
     position: relative;
     margin-left: 220px;
+
+    &:focus-within .form-search {
+        display: flex;
+    }
+
+    &:focus-within .header__search-button {
+        background-color: variables.$basicBackground;
+    }
 }
 
 .header__search-button {
@@ -68,18 +89,24 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    
-    &--active {
+
+    &:hover {
         background-color: variables.$basicBackground;
     }
-    
-    &--active + .form-search {
+
+    &:hover + .form-search {
         display: flex;
+    }
+
+    &:focus {
+        outline: none;
     }
 }
 
 .header__search-button-icon {
     margin-right: 12px;
+    color: variables.$searchIcon;
+    z-index: 1;
 }
 
 .header__nav {

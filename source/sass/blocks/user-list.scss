@@ -29,6 +29,26 @@
     letter-spacing: 2px;
     text-decoration: none;
     color: variables.$basicWhite;
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible .user-list__link-icon {
+        color: variables.$specialYellow;
+    }
+
+    &:focus-visible .user-list__link-count {
+        color: variables.$specialYellow;
+    }
+
+    &:active {
+        opacity: 0.2;
+    }
     
     &--bookmark {
         margin-right: 20px;
@@ -47,6 +67,10 @@
     }
 }
 
+.user-list__link-icon {
+    color: variables.$basicWhite;
+}
+
 .user-list__button {
     display: flex;
     margin-right: 2px;
@@ -55,4 +79,20 @@
     color: variables.$basicWhite;
     background-color: variables.$basicGreen;
     border-radius: 4px;
+
+    &:hover {
+        background-color: variables.$success;
+    }
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &:focus-visible {
+        background-color: rgba(variables.$success, 0.5);
+    }
+    
+    &:active {
+        background-color: variables.$specialGreen;
+    }
 }

@@ -1,22 +1,19 @@
 @use "global/variables";
 
 .product-card {
+    position: relative;
     padding: 27px 27px 23px 27px;
 
-    &--new {
-        position: relative;
-        
-        &::before {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 70px;
-            height: 70px;
-            background-image: url("../../images/new.svg");
-            background-repeat: no-repeat;
-            z-index: 1;
-            content: "";
-        }
+    &--new::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70px;
+        height: 70px;
+        background-image: url("../../images/new.svg");
+        background-repeat: no-repeat;
+        z-index: 1;
+        content: "";
     }
 }
 

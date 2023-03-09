@@ -1,3 +1,23 @@
+@use "global/variables";
+
+.logo__link {
+    display: inline-block;
+    text-decoration: none;
+    color: variables.$basicWhite;
+
+    &:hover {
+        opacity: 0.6;
+    }
+    
+    &:focus-visible {
+        outline: 1px solid variables.$specialYellow;
+    }
+    
+    &:active {
+        opacity: 0.2;
+    }
+}
+
 .logo__icon {
     display: block;
 }

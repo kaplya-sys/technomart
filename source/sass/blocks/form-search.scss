@@ -2,33 +2,45 @@
 
 .form-search {
     display: none;
+
+    &:hover {
+        display: flex;
+    }
 }
 
 .form-search__field {
     position: absolute;
     top: 0;
-    left: 53px;
-    width: 663px;
-    padding: 10px 12px 11px 12px;
+    left: 0;
+    width: 716px;
+    padding: 10px 12px 11px 59px;
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 16px;
     line-height: 24px;
     color: variables.$basicDarkBlue;
     background-color: variables.$basicBackground;
-    border: none;
+    border: 1px solid transparent; 
     
     &::placeholder {
-        padding-left: 6px;
         color: variables.$basicGreyLight;
     }
     
-    &:hover {     
+    &:hover {  
+        border: 1px solid variables.$basicGreen;   
     }
     
     &:focus {
-        outline: none;
+        border: 1px solid variables.$basicGreen; 
+        outline: 1px solid variables.$specialYellow;
     }
     
     &:active {
+        color: variables.$basicDarkBlue;
+        border-color: rgba(variables.$basicGreen, 0.4);
+    }
+
+    &:disabled {
+        color: variables.$disabled;
+        border-color: variables.$basicGreyLight;
     }
 }

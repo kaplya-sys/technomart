@@ -8,7 +8,7 @@
         display: none;
     }
     
-    &--authorized .auth-menu__profile-link {
+    &--authorized .auth-menu__profile-button {
         display: flex;
     }
     
@@ -26,14 +26,16 @@
     }
 }
 
-.auth-menu__profile-link {
+.auth-menu__profile-button {
     display: none;
     align-items: center;
     margin-right: 16px;
+    padding: 0;
     font-size: 16px;
     line-height: 24px;
-    text-decoration: none;
     color: variables.$basicBackground;
+    background-color: transparent;
+    border: none;
     
     &--active + .popover {
         display: flex;
@@ -52,6 +54,14 @@
     color: variables.$basicBackground;
     background-color: transparent;
     cursor: pointer;
+
+    &:hover .auth-menu__button-icon {
+        color: variables.$basicDarkBlue;
+    }
+
+    &:hover .auth-menu__button-text {
+        color: rgba(241, 245, 247, 0.8)
+    }
     
     &--active + .popover {
         display: flex;
@@ -60,6 +70,7 @@
 
 .auth-menu__button-icon {
     margin-right: 12px;
+    color: variables.$basicWhite;
 }
 
 .auth-menu__popover {
