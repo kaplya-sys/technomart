@@ -43,21 +43,16 @@
     }
     
     &:focus-visible {
-        border-color: rgba(variables.$specialGreyLight, 0.5);
+        border-color: variables.$specialYellow;
     }
     
     &:focus-visible::after,
     &:focus-visible::before {
-        background-color: rgba(variables.$specialGreyLight, 0.5);
+        background-color: variables.$specialYellow;
     }
     
     &:active {
-        border-color: variables.$specialGreenLight;
+        opacity: 0.2;
 
-    }
-    
-    &:active::after,
-    &:active::before {
-        background-color: variables.$specialGreenLight;
     }
 }

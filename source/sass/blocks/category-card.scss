@@ -27,13 +27,45 @@
 }
 
 .category-card__link {
+    position: relative;
     display: inline-block;
     min-width: 180px;
     padding: 10px 20px 10px 27px;
     text-decoration: none;
     color: variables.$basicWhite;;
     border: 1px solid variables.$basicWhite;
-    background-image: url("../../images/arrow-right.svg");
-    background-repeat: no-repeat;
-    background-position: 3% 50%;
+    
+    &:hover {
+        border-color: variables.$basicGreyLight;
+        color: variables.$basicGreyLight;
+    }
+    
+    &:hover .category-card__link-icon  {
+        color: variables.$basicGreyLight;
+    }
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &:focus-visible {
+        border-color: variables.$basicDarkBlue;
+    }
+    
+    &:active {
+        border-color: rgba(variables.$basicWhite, 0.2);
+        color: rgba(variables.$basicWhite, 0.2);
+    }
+    
+    &:active .category-card__link-icon {
+        color: rgba(variables.$basicWhite, 0.2);
+    }
+}
+
+.category-card__link-icon {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+    color: variables.$basicWhite;
 }

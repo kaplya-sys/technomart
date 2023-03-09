@@ -16,9 +16,9 @@ const showSlider = (position) => {
    }
 
     sliderItems.forEach(element => element.classList.remove('slider__item--current'));
-    paginationButtons.forEach(element => element.classList.remove('slier-pagination__button--active'));
+    paginationButtons.forEach(element => element.classList.remove('slider__pagination-button--current'));
     sliderItems[counter - 1].classList.add('slider__item--current');
-    paginationButtons[counter - 1].classList.add('slier-pagination__button--active');
+    paginationButtons[counter - 1].classList.add('slider__pagination-button--current');
 };
 
 const nextSlider = () => {

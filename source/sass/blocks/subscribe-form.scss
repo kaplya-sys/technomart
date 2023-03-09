@@ -35,4 +35,16 @@
     border: none;
     border-radius: 0 2px 2px 0;
     cursor: pointer;
+    
+    &:hover {
+        background-color: variables.$success;
+    }
+    
+    &:focus-visible {
+        outline:  1px solid variables.$specialYellow;
+    }
+    
+    &:active {
+        background-color: variables.$specialGreen;
+    }
 }

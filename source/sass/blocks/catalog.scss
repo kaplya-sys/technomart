@@ -37,6 +37,7 @@
 
 .catalog__buttons-wrapper {
     display: flex;
+    flex-wrap: wrap;
     align-self: center;
     margin-left: 3px;
     margin-bottom: 53px;
@@ -57,22 +58,60 @@
 
 .catalog__pagination-button {
     width: 50px;
-    height: 45px;
+    min-height: 45px;
     padding: 0;
     font-family: "PT Sans", "Arial", sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 100%;
     color: variables.$basicWhite;
-    background: variables.$basicGrey;
-    border: none;
+    background-color: variables.$basicGrey;
+    border: 1px solid transparent;
     border-radius: 2px;
     cursor: pointer;
+    
+    &:not(&--current):hover {
+        background-color: variables.$basicLightBlue;
+    }
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &:focus-visible {
+        border-color: variables.$specialYellow;
+    }
+    
+    &:not(&--current):active {
+        background-color: rgba(variables.$basicGrey, 0.4);
+    }
+    
+    &--current {
+        color: variables.$basicGrey;
+        background-color: variables.$basicWhite;
+    }
 }
 
 .catalog__button {
-    padding: 14px 37px 13px 37px;
+    padding: 12px 34px 12px 37px;
     color: variables.$basicWhite;
     background: variables.$basicRed;
+    border: 1px solid transparent;
     border-radius: 2px;
+    
+    &:hover {
+        background-color: variables.$priceLabelHover
+    }
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &:focus-visible {
+        border-color: variables.$specialYellow;
+    }
+    
+    &:active {
+        background-color: variables.$error
+    }
 }

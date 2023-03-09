@@ -1,3 +1,5 @@
+@use "global/variables";
+
 .social {
     display: grid;
     grid-template-columns: 36px 36px 33px;
@@ -11,4 +13,27 @@
 .social__link {
     display: flex;
     text-decoration: none;
+    
+    &:hover .social__icon-path {
+        fill: variables.$basicDarkBlue;;
+        fill-opacity: 1;
+    }
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &:focus-visible .social__icon-path {
+        fill: variables.$specialYellowLight;;
+        fill-opacity: 0.6;
+    }
+    
+    &:active .social__icon-path {
+        fill: variables.$basicGreyLight;
+        fill-opacity: 1;
+    }
+}
+
+.social__icon {
+    color: variables.$basicWhite;
 }

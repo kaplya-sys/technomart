@@ -54,11 +54,28 @@
 .slider__link {
     display: flex;
     align-self: flex-start;
-    padding: 13px 22px 14px 24px;
+    padding: 11px 20px 14px 24px;
     text-decoration: none;
     color: variables.$basicWhite;
     background-color: variables.$basicRed;
+    border: 1px solid transparent;
     border-radius: 4px;
+    
+    &:hover {
+        background-color: variables.$priceLabelHover
+    }
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &:focus-visible {
+        border-color: variables.$specialYellow;
+    }
+    
+    &:active {
+        background-color: variables.$error
+    }
 }
 
 .slider__pagination-list {
@@ -83,6 +100,22 @@
     background-color: variables.$specialYellowLight;
     border: none;
     border-radius: 50%;
+    
+    &:not(&--current):hover {
+        background-color: variables.$specialYellow;
+    }
+    
+    &:focus-visible {
+        outline: 1px solid variables.$basicDarkBlue;
+    }
+    
+    &:not(&--current):active {
+        opacity: 0.4;
+    }
+    
+    &--current {
+        background-color: variables.$basicWhite;
+    }
 }
 
 .slider__button {
@@ -92,12 +125,28 @@
     height: 50px;
     padding: 0;
     background-color: rgba(variables.$basicDarkBlue, 0.6);
-    border: none;
+    border: 1px solid transparent;
     border-radius: 50%;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     transform: translateY(-53%);
     cursor: pointer;
+    
+    &:hover {
+        background-color: rgba(variables.$basicDarkBlue, 0.8);
+    }
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &:focus-visible {
+        border-color: variables.$specialYellowLight;
+    }
+    
+    &:active {
+        background-color: rgba(variables.$basicDarkBlue, 0.4);
+    }
 
     &--prev {
         left: 20px;

@@ -5,7 +5,6 @@ const loginButton = document.querySelector('.auth-form__button-login');
 const authMenu = document.querySelector('.auth-menu');
 
 authButton.addEventListener('click', () => {
-    console.log(authMenu.hasAttribute('auth-menu--authorized'))
     if (authMenu.hasAttribute('auth-menu--authorized')) {
         authMenu.classList.remove('auth-menu--authorized');
     } else {
@@ -16,7 +15,7 @@ authButton.addEventListener('click', () => {
 loginButton.addEventListener('click', (e) => {
     e.preventDefault()
     authMenu.classList.add('auth-menu--authorized');
-    closePopover(authButton, 'auth-menu__auth-button--active');
+    authButton.classList.remove('auth-menu__auth-button--active');
 });
 
 closePopover(authButton, 'auth-menu__auth-button--active');

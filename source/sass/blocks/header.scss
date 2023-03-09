@@ -2,7 +2,7 @@
 
 .header {
     margin-bottom: 52px;
-    background: linear-gradient(#f3f7f9 44px, #293449 44px, #293449 89px, #3d546f 89px, #3d546f 159px);
+    background: linear-gradient(#f3f7f9 27.5%, #293449 27.5%, #293449 56%, #3d546f 56%);
 }
 
 .header__contacts-wrapper {
@@ -41,12 +41,23 @@
     color: variables.$basicDarkBlue;
 
     &:hover {
-        opacity: 0.6;
+        color: variables.$basicGreyLight;
+    }
+    
+    &:hover .header__telephone-icon {
+        color: variables.$basicGreyLight;
+    }
+    
+    &:focus {
+        outline: none;
     }
     
     &:focus-visible {
-        outline-offset: 1px;
-        outline: 1px solid variables.$specialYellow;
+        color: variables.$specialYellow;
+    }
+    
+    &:focus-visible .header__telephone-icon {
+        color: variables.$specialYellow;
     }
     
     &:active {
@@ -56,6 +67,7 @@
 
 .header__telephone-icon {
     margin-right: 8px;
+    color: variables.$basicDarkBlue;
 }
 
 .header__logo {

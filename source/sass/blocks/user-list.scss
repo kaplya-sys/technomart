@@ -2,6 +2,7 @@
 
 .user-list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin: 0;
     padding: 0;
@@ -74,10 +75,11 @@
 .user-list__button {
     display: flex;
     margin-right: 2px;
-    padding: 12px 12px;
+    padding: 11px 11px;
     text-decoration: none;
     color: variables.$basicWhite;
     background-color: variables.$basicGreen;
+    border: 1px solid transparent;
     border-radius: 4px;
 
     &:hover {
@@ -89,7 +91,7 @@
     }
     
     &:focus-visible {
-        background-color: rgba(variables.$success, 0.5);
+        border-color: variables.$specialYellow;;
     }
     
     &:active {

@@ -60,9 +60,12 @@
         border-color: variables.$basicGreen;
     }
     
+    &:focus{
+        outline: none;
+    }
+    
     &:focus-visible {
-        outline-offset: 1px;
-        outline: 1px solid variables.$specialYellow;
+        border-color: variables.$specialYellow;
     }
     
     &:active {

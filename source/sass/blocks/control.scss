@@ -2,6 +2,7 @@
 
 .control {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     flex-basis: content;
     cursor: pointer;

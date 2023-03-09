@@ -37,6 +37,30 @@
     background-color: transparent;
     border: none;
     
+    &:hover {
+        color: variables.$basicGreyLight;
+    }
+    
+    &:hover .auth-menu__profile-icon {
+        color: variables.$basicGreyLight;
+    }
+
+    &:focus {
+        outline: none;
+    }
+    
+    &:focus-visible {
+        color: variables.$specialYellow;
+    }
+    
+    &:focus-visible .auth-menu__profile-icon {
+        color: variables.$specialYellow;
+    }
+
+    &:active {
+        opacity: 0.2;
+    }
+    
     &--active + .popover {
         display: flex;
     }
@@ -44,6 +68,7 @@
 
 .auth-menu__profile-icon {
     margin-right: 8px;
+    color: variables.$basicWhite;
 }
 
 .auth-menu__auth-button {
@@ -53,14 +78,29 @@
     line-height: 18px;
     color: variables.$basicBackground;
     background-color: transparent;
-    cursor: pointer;
 
+    &:hover {
+        color: variables.$basicGreyLight;
+    }
+    
     &:hover .auth-menu__button-icon {
-        color: variables.$basicDarkBlue;
+        color: variables.$basicGreyLight;
     }
 
-    &:hover .auth-menu__button-text {
-        color: rgba(241, 245, 247, 0.8)
+    &:focus {
+        outline: none;
+    }
+    
+    &:focus-visible {
+        color: variables.$specialYellow;
+    }
+    
+    &:focus-visible .auth-menu__button-icon {
+        color: variables.$specialYellow;
+    }
+
+    &:active {
+        opacity: 0.2;
     }
     
     &--active + .popover {

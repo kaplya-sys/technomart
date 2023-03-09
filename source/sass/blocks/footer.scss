@@ -15,7 +15,7 @@
 }
 
 .footer__logo {
-    margin-bottom: 23px;
+    margin-bottom: 16px;
 }
 
 .footer__contacts-address {
@@ -31,12 +31,15 @@
     color: variables.$addressText;
 
     &:hover {
-        opacity: 0.6;
+        color: variables.$basicGreyLight;
+    }
+    
+    &:focus {
+        outline: none;
     }
     
     &:focus-visible {
-        outline-offset: 1px;
-        outline: 1px solid variables.$specialYellow;
+        color: variables.$specialYellow;
     }
     
     &:active {
@@ -75,19 +78,22 @@
     color: variables.$basicWhite;
 }
 
-.feedback__feedback-link {
+.footer__feedback-link {
     font-size: 16px;
     line-height: 24px;
     text-decoration: none;
     color: variables.$specialYellowLight;
 
     &:hover {
-        opacity: 0.6;
+        color: variables.$specialYellow;
+    }
+    
+    &:focus {
+        outline: none;
     }
     
     &:focus-visible {
-        outline-offset: 1px;
-        outline: 1px solid variables.$specialYellow;
+        color: variables.$basicGreyLight;
     }
     
     &:active {
@@ -113,12 +119,15 @@
     color: variables.$specialYellowLight;
 
     &:hover {
-        opacity: 0.6;
+        color: variables.$specialYellow;
+    }
+    
+    &:focus {
+        outline: none;
     }
     
     &:focus-visible {
-        outline-offset: 1px;
-        outline: 1px solid variables.$specialYellow;
+        color: variables.$basicGreyLight;
     }
     
     &:active {

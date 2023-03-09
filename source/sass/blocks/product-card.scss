@@ -2,7 +2,6 @@
 
 .product-card {
     position: relative;
-    padding: 27px 27px 23px 27px;
 
     &--new::before {
         position: absolute;
@@ -22,9 +21,23 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    padding: 27px 27px 23px 27px;
+    text-decoration: none;
     
     &:hover + .product-card__buttons-wrapper {
         display: flex;
+    }
+    
+    &:focus-visible {
+        outline: 1px solid variables.$specialYellowLight;
+    }
+    
+    &:focus-visible + .product-card__buttons-wrapper {
+        display: flex;
+    }
+    
+    &:active {
+        opacity: 0.2;
     }
 }
 
@@ -46,6 +59,7 @@
 }
 
 .product-card__old-price {
+    min-height: 18px;
     margin-bottom: 15px;
     font-size: 14px;
     line-height: 18px;
@@ -64,6 +78,8 @@
     text-transform: uppercase;
     color: variables.$basicWhite;
     mask-image: url("../../images/card-price.png");
+    mask-repeat: no-repeat;
+    mask-size: cover;
     background-color: variables.$basicRed;
     border-radius: 4px;
     

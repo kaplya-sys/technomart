@@ -11,7 +11,7 @@ profileButton.addEventListener('click', () => {
 logoutButton.addEventListener('click', (e) => {
     e.preventDefault()
     authMenu.classList.remove('auth-menu--authorized');
-    closePopover(profileButton, 'auth-menu__profile-button--active');
+    profileButton.classList.remove('auth-menu__profile-button--active');
 });
 
 closePopover(profileButton, 'auth-menu__profile-button--active');
