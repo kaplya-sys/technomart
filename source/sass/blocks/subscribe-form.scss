@@ -15,7 +15,8 @@
 }
 
 .subscribe-form__field {
-    padding: 5px 22px 9px 15px;
+    width: 220px;
+    padding: 5px 14px 9px 15px;
     border: 1px solid variables.$basicGreen;
     
     &::placeholder {
